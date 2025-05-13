@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>글쓰기</title>
+    <style>
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>글쓰기</h1>
+      <form action="/write" method="post">
+        <div class="form-group">
+          <label for="title">제목:</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+        <div class="form-group">
+          <label for="text">내용:</label>
+          <textarea id="text" name="text" rows="10" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="user_id">작성자:</label>
+          <input type="text" id="user_id" name="user_id" required />
+        </div>
+        <button type="submit">작성하기</button>
+      </form>
+    </div>
+  </body>
+</html>
